@@ -1,0 +1,20 @@
+import java.util.Date;
+
+public class DateEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Date d=new Date();
+		
+		System.out.println(d);
+		
+		Date d1=new Date(d.getTime()+1000);
+		
+		System.out.println(d.after(d1));
+		System.out.println(d.before(d1));
+		System.out.println(d1.compareTo(d));
+		System.out.println(d.compareTo(d1));
+
+	}
+
+}
