@@ -1,0 +1,11 @@
+package bitshifting;
+
+public class Zerofilling {
+	public static void main(String[] args){
+		int x=8;
+		System.out.println("x="+x);
+		x=x>>>2;
+		System.out.println("After shifting 2 bit right and filling zeros,x="+x);
+	}
+
+}
