@@ -1,0 +1,10 @@
+package inheritance;
+
+public interface PhysicalConstants {
+	
+	public long SPEEDOFLIGHTINVACUUM=299792458;
+	public double GRAVITATIONALCONSTANT=6.67428E-11;
+	public float STANDARDGRAVITATIONALACCELERATION=9.80665f;
+	
+
+}
