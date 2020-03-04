@@ -1,0 +1,29 @@
+package mystrings;
+
+public class Stringdemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s="Hello";
+		System.out.println("Object id:"+s.hashCode());
+		String s1="Hello";
+		System.out.println("Object id:"+s.hashCode());
+		System.out.println(s1);
+		
+		String name="Rohith";
+		name.concat("Kumar");
+		System.out.println(name);
+		StringBuffer myname=new StringBuffer("Rohith");
+		myname.append(" Kumar");
+		
+		System.out.println(myname);
+		
+		StringBuilder sb=new StringBuilder(" Hindusthan");
+		sb.append(" Computers Limited");
+		
+		System.out.println("is working in"+sb);
+		
+
+	}
+
+}
