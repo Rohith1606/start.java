@@ -1,0 +1,38 @@
+package inheritance;
+import inheritance.Bus;
+import inheritance.Car;
+import inheritance.Transport;
+import java.util.Scanner;
+
+public class Transportdemo {
+	
+
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+		Bus b=null;
+		Car c=null;
+		Transport t=createTransport();
+		if(t instanceof Bus)
+		{
+			b=(Bus)t;
+		}else if(t instanceof Car)
+		{
+			c=(Car)t;
+		}
+		public static Transport createTransport()
+		{
+		System.out.println("Enter object type(Bus/Car):");
+		Scanner sc=new Scanner(System.in);
+		String transport=sc.nextLine();
+		
+		if(transport.equals("Bus"))
+			return new Bus();
+		else if(transport.equals("car"))
+			return new Car();
+		else
+			return null;
+		
+
+	
+	}
