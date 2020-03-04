@@ -1,0 +1,39 @@
+
+public class Arraydemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int subjects[];
+		
+		String studentNames[]=new String[2];
+		
+		String computer_languages[]={"C","C++","Java"};
+		
+		String trainerNames[]={"sivaram","sanjay","vidyasagar"};
+		System.out.println("Trainers");
+		for(String trainerName:traiNamneres)
+		{
+			System.out.println(trainerName);
+		}
+		
+		int student_marks[][];
+		
+		int StudentMarks[][]=new int[2][3];
+		
+		int marks[][];
+		
+		int inter_marks[][][]={{{56,54,73},{40,45,65},{32,75,65}},{{25,75,85},{56,98,54},{85,96,36}}};
+		System.out.println("Inter Marks");
+		for()
+		{
+			System.out.println(trainerName);
+		}
+		
+		
+		
+		
+		
+	}
+
+}
