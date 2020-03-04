@@ -1,0 +1,31 @@
+package inheritance;
+
+public class Bus implements Transport{
+	private String busNumber;
+	private StringBuffer serviceNumber;
+	
+	public Bus()
+	{
+		busNumber="AP2542";
+		serviceNumber=new StringBuffer("5662");
+	}
+
+	public void start() {
+		// TODO Auto-generated method stub
+		System.out.println("Bus starts")
+;
+		}
+
+
+	public void stop() {
+		// TODO Auto-generated method stub
+		System.out.println("Bus stops");
+		
+	}
+
+	@Override
+	public String toString() {
+		return "Bus [busNumber=" + busNumber + ", serviceNumber=" + serviceNumber + "]";
+	}
+
+}
