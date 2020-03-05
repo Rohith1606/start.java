@@ -1,10 +1,8 @@
 package inheritance;
-import static inheritance.PhysicalConstants.SPEEDOFLIGHTINVACUUM;
-import static inheritance.PhysicalConstants.GRAVITATIONALCONSTANT;
-import static inheritance.PhysicalConstants.STANDARDGRAVITATIONALACCELERATION;
+import static inheritance.PhysicalConstants;
 
 
-public class UseConstants {
+public class UseConstants implements PhysicalConstants {
 	
 	public static void main(String args[])
 	{
