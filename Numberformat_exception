@@ -1,0 +1,26 @@
+package myexceptions;
+
+public class Dividewithcare {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a,b,c=0;
+		a=Integer.parseInt(args[0]);
+		b=Integer.parseInt(args[1]);
+		try{
+		c=a/b;
+		}catch(ArithmeticException ae)
+		{
+			System.out.println("We cannot divide any number with zero");
+		}catch(NumberFormatException ne)
+		{
+			System.out.println("only number required,not an alphabet");
+		}
+		
+		System.out.println("Result="+c);
+		
+		
+
+	}
+
+}
