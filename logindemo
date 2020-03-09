@@ -1,0 +1,93 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.awt.FlowLayout;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JPasswordField;
+import javax.swing.JFrame;
+import javax.swing.JCheckBox;
+import java.awt.event.ItemListener;
+class Myframe extends JFrame implements ActionListener,ItemListener
+{
+	JLabel username;
+	JTextField unametxt;
+	JLabel userpassword;
+	JPasswordField upassword;
+	JLabel admintxt;
+	JCheckBox adminornot;
+	JButton button,resetbutton;
+
+	
+	Myframe()
+	{
+		setTitle("Login");
+		username=new JLabel("username");
+		unametxt=new JTextField(25);
+		userpassword=new JLabel("password:");
+		upassword=new JPasswordField(8);
+		admintxt=new JLabel("Administrator");
+		adminornot=new JCheckBox();
+		button = new JButton("Submit");
+		resetbutton=new JButton("Reset");
+	/*set layout*/
+		setLayout(new FlowLayout());
+	/*set bounfds to each comp*/
+		username.setBounds(10,40,40,80);
+		unametxt.setBounds(10,81,100,81);
+		userpassword.setBounds(20,40,40,80);
+		upassword.setBounds(20,81,100,80);
+		admintxt.setBounds(37,38,100,85);
+		adminornot.setBounds(36,38,100,85);
+		button.setBounds(30,40,100,80);
+		resetbutton.setBounds(35,40,100,89);
+		
+
+		
+	/*add comp to frame*/
+		add(username);
+		add(unametxt);
+		add(userpassword);
+		add(upassword);
+		add(adminornot);
+		add(admintxt);
+		add(button);
+		add(resetbutton);
+		resetbutton.addActionListener(this);
+		button.addActionListener(this);
+		adminornot.addItemListener(this);
+	}
+
+
+public void actionPerformed(ActionEvent ae)
+{
+	if(ae.getActionCommand().equals("Reset"))
+	{
+		unametxt.setText("");
+		upassword.setText("");
+	}else if(ae.getActionCommand().equals("submit"))
+	{
+		
+	}
+
+}
+@Override
+public void itemStateChanged(ItemEvent ie)
+{
+		
+}
+}
+public class Logindemo
+{
+
+	public static void main(String[] args)
+	{
+		Myframe mf=new Myframe();
+		mf.setBounds(0,0,300,500);
+		mf.setVisible(true);
+	}
+}
+
+
