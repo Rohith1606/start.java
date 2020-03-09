@@ -1,0 +1,48 @@
+package innerclasses_inclassex;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class Arraysortingdemo {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		// TODO Auto-generated method stub
+		int marks[]={78,65,88};
+		String subjects[]={"Maths","Physics","Chemistry"};
+		float[] sub_marks=new float[3];
+		int i=0;
+		//display marks in sorted manner
+		for(int mark:marks){
+			System.out.println(subjects[i]+":"+marks);
+			i++;
+		}
+		//display marks in sorted manner
+		Arrays.sort(marks);
+		System.out.println("After sorting,numeric array:");
+		for(int mark:marks)
+		System.out.println(mark);
+		
+		//show marks in reverse order(decending order)
+		for(int l=marks.length-1;i>=0;l--)
+		{
+			System.out.println(marks[l]);
+		}
+		
+		//create inout stream reader
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		//accept values into subject marks array
+		for(i=0;i<sub_marks.length;i++)
+		{
+			sub_marks[i]=Float.parseFloat(br.readLine());
+		}
+		//display array in same order
+		for(float sm:sub_marks)
+		{
+			System.out.println(sm);
+		}
+	}
+
+}
