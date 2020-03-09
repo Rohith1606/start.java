@@ -69,3 +69,8 @@ public class Eggseller
 		henthread.layEggs();
 		ownerthread.sellEggs();
 		
+				
+		
+	}
+}
+		
