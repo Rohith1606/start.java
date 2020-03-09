@@ -1,0 +1,71 @@
+package lms_threads;
+class Hen extends Thread
+{
+	public void run()
+	{
+		layEggs();
+	}
+
+public void layEggs()
+{
+	int numberOfEggs[]={1,2};
+	boolean layed=false;
+	for(int i=1;i<120;i++)
+	{
+	System.out.println("Hen layed eggs");
+	if(layed)
+	{
+			layed=false;
+		System.out.print(numberOfEggs[0]);
+	}else
+	{
+		layed=true;
+		System.out.print(numberOfEggs[1]);
+		
+	}
+	try
+	{
+		Thread.currentThread().sleep(1000);
+		join();
+	}catch(InterruptedException ie)
+	{
+		
+	}
+	System.out.println();
+	}
+}
+}
+class Owner extends Thread
+{
+	int gain;
+	public void run()
+	{
+		sellEggs();
+	}
+	public void sellEggs()
+	{
+		for(int i=1;i<gain;i++)
+		{
+			System.out.println("owner gained Rs."+2+i);
+		}
+			try
+			{
+				Thread.currentThread().wait();
+			}catch(InterruptedException ie)
+			{
+				notify();
+			}
+		}
+	}
+	
+
+public class Eggseller 
+{
+	public static void main(String[] args)
+	{
+		Hen henthread=new Hen();
+		Owner ownerthread=new Owner();
+		
+		henthread.layEggs();
+		ownerthread.sellEggs();
+		
