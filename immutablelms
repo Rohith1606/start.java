@@ -1,0 +1,35 @@
+package immutable_lms;
+
+//creat immutable class
+final class Company
+{
+	private String companyName;
+	private int registrationNumber;
+	
+	//no setters and write only getters
+	
+	//set values to private properties through constructor
+	Company(String companyName,int registrationNumber){
+		this.companyName=companyName;
+		this.registrationNumber=registrationNumber;
+	}
+	public String getCompanyName(){
+		return companyName;
+	}
+	public int getRegistrationNumber(){
+		return registrationNumber;
+	}
+}
+public class Myimmutable {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Company c1=new Company("HCL",12345);
+		Company c2=c1;
+		c2=new Company("wipro",9999);
+		System.out.println("company:"+c1.getCompanyName()+"Registration Number:"+c1.getRegistrationNumber());
+		System.out.println("company:"+c2.getCompanyName()+"Registration Number:"+c2.getRegistrationNumber());
+
+	}
+
+}
