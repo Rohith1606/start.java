@@ -1,0 +1,24 @@
+for(int counter=0;counter<operandStack.size();counter++)
+		{
+			int firstElement=(int)operandStack.pop();
+			int secondElement=(int)operandStack.pop();
+			
+			char operator=(char)operStack.pop();
+			
+			int result;
+			
+			switch(operator)
+			{
+			case '+':result=firstElement+secondElement;
+					operandStack.push(result);
+					break;
+			case '-':result=firstElement-secondElement;
+					operandStack.push(result);
+					break;
+			case '*':result=firstElement*secondElement;
+					operandStack.push(result);
+					break;
+			case '/':result=firstElement/secondElement;
+					operandStack.push(result);
+					break;
+				default:
