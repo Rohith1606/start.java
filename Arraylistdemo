@@ -1,0 +1,63 @@
+package mycollections;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+
+public class Arraylistdemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList listOfObjects=new ArrayList();
+		
+		
+		listOfObjects.add(1);
+		listOfObjects.add(2);
+		listOfObjects.add(1);
+		listOfObjects.add("Hindustan");
+		listOfObjects.add("Aeronautics");
+		listOfObjects.add("Turnover");
+		listOfObjects.add(10000000L);
+		listOfObjects.add("Dollars");
+		
+		
+		System.out.println(listOfObjects);
+		
+		listOfObjects.remove(1);
+		System.out.println("After removal of 2nd element,collection in memory");
+		System.out.println(listOfObjects);
+		
+		if(listOfObjects.contains("Dollars"))
+		{
+			System.out.println("Turnover is in Dollars");
+			
+		}
+		else
+		{
+			System.out.println("Turnover in rupees");
+		}
+		Iterator itr=listOfObjects.iterator();
+		
+		while(itr.hasNext())
+		{
+			Object element=itr.next();
+			
+			if(element instanceof String){
+				System.out.print(element+" ");
+			}else if(element instanceof Long)
+			{
+				System.out.println(element);
+			}else if(element instanceof Integer)
+			{
+				System.out.println("Integer:"+element);
+			}
+		}
+		System.out.println("Shown elements of Arraylist:");
+		for(Object o:listOfObjects)
+		{
+			System.out.println(0);
+		}
+		
+
+	}
+
+}
