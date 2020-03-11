@@ -1,0 +1,45 @@
+package collections_lms;
+
+import java.util.Vector;
+
+class Student{
+
+	@Override
+	public String toString() {
+		return "Student [getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
+	
+}
+class Teacher{
+
+	@Override
+	public String toString() {
+		return "Teacher [getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
+	
+}
+class HOD{
+
+	@Override
+	public String toString() {
+		return "HOD [getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
+	
+}
+
+public class Vectordemo {
+
+	public static void main(String[] args) {
+		// Create a vector collection that allows any object
+		Vector <Object>objlist=new Vector();
+		objlist.add(new Student());
+		objlist.add(new Teacher());
+		objlist.add(new HOD());
+		
+System.out.println(objlist);
+	}
+
+}
