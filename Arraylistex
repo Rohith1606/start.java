@@ -1,0 +1,41 @@
+package arraylisttlms;
+
+import java.util.ArrayList;
+
+public class Arraylistex {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList a= new ArrayList();
+
+		a.add(1);
+
+		a.add(1.78);
+
+		double sum=0;
+
+		for(Object o:a)
+
+		{
+
+			Number d=null;
+
+			//cast the object based on type and use it
+
+			if(o instanceof Number)
+
+			{
+
+				d=(Number)o;
+
+				sum=sum+d.doubleValue();				
+
+			}
+
+			}
+
+		System.out.print(sum);
+
+	}
+
+}
