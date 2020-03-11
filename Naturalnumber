@@ -1,0 +1,16 @@
+
+public class Naturalnumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 int i;
+		 System.out.println ("Numbers are:");
+		 for (i=1;i<=10;i++)
+		 {      
+			 System.out.print("\t" +i);
+		 }
+		 
+	}
+
+}
+
