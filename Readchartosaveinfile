@@ -1,0 +1,43 @@
+package myio;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Readchartosaveinlife {
+
+	public static void main(String[] args) throws IOException {
+		//Create input stream reader to read a character from keyboard
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		
+		char ch;
+		//prompt the user for a chARACTER
+		System.out.println("Enter a character:");
+		ch=br.readLine().charAt(0);
+		
+		//create file object
+		//File file=new File("Onechar.txt");
+		File file=new File("C:\\Users\\TSSVJW-training1\\Desktop\\Rohith\\Onechar.txt");
+		
+		FileWriter fw=new FileWriter(file);
+		//write into the file
+		fw.write((int)ch);
+		
+		
+		//accept a string
+		String addingStringtoFile=br.readLine();
+		CharSequence charSequence=addingStringtoFile;
+		
+		fw.append(' ');
+		fw.append(charSequence);
+		fw.close();
+		//stream objects should be closed after usage
+		System.out.println("Character saved sucessfully");
+		
+		
+
+	}
+
+}
