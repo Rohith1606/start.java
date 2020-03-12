@@ -37,18 +37,26 @@ public class Readchartosaveinlife {
 		//stream objects should be closed after usage
 		System.out.println("Character saved sucessfully");
 		System.out.println("Now we will read data from Onechar.txt into character array");
-		char readfromFile[]=new char[30];
+		String readdatafromFile=new String();
+		char readfromFile[]=readdatafromFile.toCharArray();
 		//To read data from a file create filereader object
 		FileReader fr=new FileReader(file);
 		int i=0;
-		while(fr.read()!=-1)
+		try
 		{
-			readfromFile[i-1]=(char)fr.read();
-			i++;
-			if(readfromFile[i]==-1)
-			break;
+		while(true)
+		{
+			if((readfromFile[i]=(char)fr.read())!=-1)
+				i++;
+			else
+				break;
+		
+			
 		}
-		System.out.println("Data read from file:");
+		}catch(ArrayIndexOutOfBoundsException ai){
+			System.out.println("Data read from file:");
+		}
+		
 		for(char c: readfromFile)
 		{
 			System.out.print(c);
